@@ -1,0 +1,23 @@
+{
+    "name": "lnikol/framework",
+    "description": "My very own php framework from scratch",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lnikol\\Framework\\": "src/",
+			"Core\\": "core/",
+            "Controllers\\": "Controllers/",
+            "Traits\\": "Traits/",
+            "Config\\": "Config"
+        },
+		"files": [
+			"Helpers/Superglobals.php"
+		]
+    },
+    "authors": [
+        {
+            "name": "Lazar Nikolic"
+        }
+    ]
+}
