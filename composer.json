@@ -9,7 +9,8 @@
 			"Core\\": "core/",
             "Controllers\\": "Controllers/",
             "Traits\\": "Traits/",
-            "Config\\": "Config"
+            "Config\\": "Config",
+            "Helpers\\": "Helpers"
         },
 		"files": [
 			"Helpers/Superglobals.php"
