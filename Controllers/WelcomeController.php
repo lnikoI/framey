@@ -18,7 +18,8 @@ class WelcomeController
 
     public function index(): void
     {
-        deb('tes');
+        deb($_ENV);
+
 
         $stmt = $this->db->conn->query("SELECT * FROM users");
 
