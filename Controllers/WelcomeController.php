@@ -18,7 +18,7 @@ class WelcomeController
     }
 
     public function index(): void
-    {  
+    {
         $stmt = $this->db->conn->query("SELECT * FROM users");
 
         $users = $stmt->fetchall();

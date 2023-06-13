@@ -2,11 +2,13 @@
 
 namespace Core;
 
+use Controllers\WelcomeController;
+
 class Router
 {
 	public $postParams = [];
 
-	public array $GETroutes = [];
+	public array $getRoutes = [];
 
 	public static function initialize()
 	{
@@ -16,15 +18,8 @@ class Router
 		http_response_code(404);
 	}
 
-/*
-	public static function __callStatic(string $name, array $arguments)
+	public function get(string $uri, string|array|callable $callable): void
     {
-        return (new static)->{"$name"."t"}($arguments);
-    }
-*/
-
-	public function get(string $uri, string|array|callable $callable)
-	{
 
 		if($_SERVER['REQUEST_METHOD'] !== "GET") {
 			return;

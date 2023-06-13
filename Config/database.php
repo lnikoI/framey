@@ -7,7 +7,7 @@ class database
 	protected string $servername = "localhost";
 	protected string $username = "root";
 	protected string $password = "";
-	protected string $dbname = "test";
+	protected string $dbname = "php_framework";
 
 	public $conn = null;
 
