@@ -2,14 +2,14 @@
 
 namespace Core;
 
-use Helpers\Env;
+use Helpers\Environment;
 
 class App
 {
-	public static function initialize(): void
+    public static function initialize(): void
     {
-        Env::initialize();
+        Environment::initialize();
 
         Router::initialize();
-	}
+    }
 }

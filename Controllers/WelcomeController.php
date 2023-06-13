@@ -2,9 +2,8 @@
 
 namespace Controllers;
 
-use Traits\View;
-
 use Config\Database;
+use Traits\View;
 
 class WelcomeController
 {
@@ -20,6 +19,7 @@ class WelcomeController
     public function index(): void
     {
         var_dump($_ENV);
+        die();
 
         $stmt = $this->db->conn->query("SELECT * FROM users");
 
@@ -38,13 +38,13 @@ class WelcomeController
         $inserts = [
             $_POST['name'],
             $_POST['email'],
-            $_POST['password']
+            $_POST['password'],
         ];
 
         $sql = "INSERT INTO users(name, email, password) VALUES (?,?,?)";
         $stmt = $this->db->conn->prepare($sql);
         $stmt->execute($inserts);
-        
+
         header("Location: http://localhost:8000/index");
     }
 }
