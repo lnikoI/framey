@@ -15,9 +15,7 @@ class WelcomeController extends Controller
 
     public function index()
     {
-        $stmt = $this->db->conn->query("SELECT * FROM users");
-
-        $users = $stmt->fetchall();
+        $users = Database::query("SELECT * FROM users");
 
         view('welcome.php', ['users' => $users]);
     }
