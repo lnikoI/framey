@@ -58,7 +58,7 @@ class BugyDebugy
             $title = '#################### <i>DEBUG</i> ####################';
         }
 
-        return "<strong style=\"background-color: red; padding: 5px; margin-bottom: 5px; border-radius: 5px;\">{$title}</strong>";
+        return "<strong style=\"background-color: #ff00ff; padding: 5px; margin-bottom: 5px; border-radius: 5px;\">{$title}</strong>";
     }
 
     protected function strongEcho(string $text): string
