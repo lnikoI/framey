@@ -2,7 +2,7 @@
 
 namespace Core;
 
-use Helpers\Environment;
+use Assistants\Environment;
 
 class App
 {

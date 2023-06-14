@@ -11,7 +11,7 @@
       "Controllers\\": "Controllers/",
       "Traits\\": "Traits/",
       "Config\\": "Config",
-      "Helpers\\": "Helpers",
+      "Assistants\\": "Assistants",
       "Companions\\": "Companions"
     },
     "files": [

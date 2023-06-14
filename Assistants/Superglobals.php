@@ -1,6 +1,8 @@
 <?php
 
 
+namespace Assistants;
+
 class Superglobals
 {
     private $_SERVER;
