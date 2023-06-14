@@ -42,6 +42,6 @@ class WelcomeController
         $stmt = $this->db->conn->prepare($sql);
         $stmt->execute($inserts);
 
-        header("Location: http://localhost:8000/index");
+        header("Location: http://localhost:8002/index");
     }
 }
