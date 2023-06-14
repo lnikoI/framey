@@ -10,7 +10,8 @@
       "Controllers\\": "Controllers/",
       "Traits\\": "Traits/",
       "Config\\": "Config",
-      "Helpers\\": "Helpers"
+      "Helpers\\": "Helpers",
+      "Companions\\": "Companions"
     },
     "files": [
       "Helpers/helpers.php"
