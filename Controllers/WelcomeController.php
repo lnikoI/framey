@@ -2,20 +2,8 @@
 
 namespace Controllers;
 
-use Database\Database;
-use Traits\View;
-
-class WelcomeController
+class WelcomeController extends Controller
 {
-    use View;
-
-    protected $db = null;
-
-    public function __construct()
-    {
-        $this->db = new Database();
-    }
-
     public function index(): void
     {
         $stmt = $this->db->conn->query("SELECT * FROM users");
