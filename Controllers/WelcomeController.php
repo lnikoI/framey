@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-use Config\Database;
+use Database\Database;
 use Traits\View;
 
 class WelcomeController
@@ -18,8 +18,6 @@ class WelcomeController
 
     public function index(): void
     {
-        deb($_ENV);
-
         $stmt = $this->db->conn->query("SELECT * FROM users");
 
         $users = $stmt->fetchall();

@@ -7,6 +7,7 @@
     "psr-4": {
       "Lnikol\\Framework\\": "src/",
       "Core\\": "Core/",
+      "Database\\": "Database/",
       "Controllers\\": "Controllers/",
       "Traits\\": "Traits/",
       "Config\\": "Config",
