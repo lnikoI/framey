@@ -10,7 +10,7 @@ class WelcomeController extends Controller
 
         $users = $stmt->fetchall();
 
-        deb($users);
+        deb(cfg('app.url'));
     }
 
     public function index()
@@ -41,6 +41,6 @@ class WelcomeController extends Controller
         $stmt = $this->db->conn->prepare($sql);
         $stmt->execute($inserts);
 
-        header("Location: http://localhost:8002/index");
+        header('Location: ' . cfg('app.url') . '/index');
     }
 }

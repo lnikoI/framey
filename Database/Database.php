@@ -8,15 +8,15 @@ class Database
 
     public function __construct()
     {
-        $dbConnection = env('DB_CONNECTION');
-        $dbHost = env('DB_HOST');
-        $dbName = env('DB_DATABASE');
+        $dbConnection = cfg('database.db_connection');
+        $dbHost = cfg('database.db_host');
+        $dbName = cfg('database.db_name');
 
         try {
             $this->conn = new \PDO(
                 "{$dbConnection}:host={$dbHost};dbname={$dbName}",
-                env('DB_USERNAME'),
-                env('DB_PASSWORD')
+                cfg('database.db_username'),
+                cfg('database.db_password')
             );
 
         } catch (PDOException $e) {
