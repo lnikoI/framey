@@ -2,13 +2,13 @@
 
 namespace Controllers;
 
+use Database\Database;
+
 class WelcomeController extends Controller
 {
     public function home()
     {
-        $stmt = $this->db->conn->query("SELECT * FROM users");
-
-        $users = $stmt->fetchall();
+        $users = Database::query("SELECT * FROM users");
 
         deb($users);
     }
