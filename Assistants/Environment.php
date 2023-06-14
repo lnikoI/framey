@@ -9,7 +9,7 @@ class Environment
      */
     public static function initialize(): void
     {
-        $envPath = dirname(__DIR__) . '/.env';
+        $envPath = root_dir('/.env');
 
         if (! file_exists($envPath)) {
             throw new \RuntimeException("File not found: {$envPath}");
@@ -28,9 +28,9 @@ class Environment
     {
         foreach ($lines as $line) {
 
-            $shouldIgnoreComments = str_starts_with($line, '#');
+            $isCommentedLine = str_starts_with($line, '#');
 
-            if ($shouldIgnoreComments) {
+            if ($isCommentedLine) {
                 continue;
             }
 
