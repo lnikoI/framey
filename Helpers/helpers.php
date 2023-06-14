@@ -1,5 +1,6 @@
 <?php
 
+use Companions\BugyDebugy;
 use JetBrains\PhpStorm\NoReturn;
 
 if (! function_exists('env')) {
@@ -10,9 +11,9 @@ if (! function_exists('env')) {
 }
 
 if (! function_exists('deb')) {
-    #[NoReturn] function deb(mixed $variable): mixed
+    #[NoReturn] function deb(mixed $variable): void
     {
-        $bugyDebugy = new \Companions\BugyDebugy();
+        $bugyDebugy = new BugyDebugy();
 
         $bugyDebugy->bugy($variable);
     }

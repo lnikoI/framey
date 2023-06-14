@@ -11,11 +11,11 @@ class BugyDebugy
     #[NoReturn] public function bugy(mixed $variable): void
     {
         echo $this->title();
-        echo $this->newLine(2);
-
-        echo "File: {$this->traces()['file']}";
         echo $this->newLine();
-        echo "Line: {$this->traces()['line']}";
+
+        echo $this->strongEcho('File: ') . $this->traces()['file'];
+        echo $this->newLine();
+        echo $this->strongEcho('Line: ') . $this->traces()['line'];
 
         ob_start();
         var_dump($variable);
@@ -62,5 +62,10 @@ class BugyDebugy
         }
 
         return "<strong style=\"background-color: red; padding: 5px; margin-bottom: 5px; border-radius: 5px;\">{$title}</strong>";
+    }
+
+    protected function strongEcho(string $text): string
+    {
+        return "<strong>{$text}</strong>";
     }
 }
