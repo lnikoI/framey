@@ -20,7 +20,6 @@ class WelcomeController
     {
         deb($_ENV);
 
-
         $stmt = $this->db->conn->query("SELECT * FROM users");
 
         $users = $stmt->fetchall();

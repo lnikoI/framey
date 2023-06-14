@@ -13,6 +13,10 @@ class BugyDebugy
         echo $this->title();
         echo $this->newLine(2);
 
+        echo "File: {$this->traces()['file']}";
+        echo $this->newLine();
+        echo "Line: {$this->traces()['line']}";
+
         ob_start();
         var_dump($variable);
 
@@ -35,9 +39,9 @@ class BugyDebugy
 
     protected function traces(): array
     {
-        $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2);
+        $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 3);
 
-        return $trace[0];
+        return $trace[2];
     }
 
     protected function newLine(int $lines = 1): string
@@ -57,6 +61,6 @@ class BugyDebugy
             $title = '#################### <i>DEBUG</i> ####################';
         }
 
-        return $deBugTitle = "<strong style=\"background-color: red; padding: 5px; margin-bottom: 5px; border-radius: 5px;\">{$title}</strong>";
+        return "<strong style=\"background-color: red; padding: 5px; margin-bottom: 5px; border-radius: 5px;\">{$title}</strong>";
     }
 }
