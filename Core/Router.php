@@ -2,13 +2,15 @@
 
 namespace Core;
 
+use JetBrains\PhpStorm\NoReturn;
+
 class Router
 {
     public $postParams = [];
 
     public array $getRoutes = [];
 
-    public static function initialize()
+    public static function initialize(): void
     {
         include_once("../routes/routes.php");
 
@@ -32,7 +34,7 @@ class Router
     }
 
 
-    public function post(string $uri, string|array|callable $callable)
+    public function post(string $uri, string|array|callable $callable): void
     {
         if ($_SERVER['REQUEST_METHOD'] !== "POST") {
             return;
@@ -52,7 +54,7 @@ class Router
 
     }
 
-    private function callableCall(string|array|callable $callable)
+    #[NoReturn] private function callableCall(string|array|callable $callable): void
     {
         $this->callIfArray($callable);
 
@@ -66,7 +68,7 @@ class Router
         exit();
     }
 
-    private function callIfArray(string|array|callable $callable)
+    private function callIfArray(string|array|callable $callable): void
     {
         if (is_array($callable)) {
 
