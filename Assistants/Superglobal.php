@@ -3,7 +3,7 @@
 
 namespace Assistants;
 
-class Superglobals
+class Superglobal
 {
     private $_SERVER;
     private $_POST;
