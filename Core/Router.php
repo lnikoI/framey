@@ -14,7 +14,7 @@ class Router
     {
         include_once(root_dir('routes/routes.php'));
 
-        require(root_dir('view/404.html'));
+        view('404.php');
         http_response_code(404);
     }
 

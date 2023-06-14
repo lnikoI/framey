@@ -42,7 +42,7 @@ if (! function_exists('root_dir')) {
 if (! function_exists('view')) {
     function view(string $viewFile, array $data = null): void
     {
-        $fileLocation = root_dir("view/{$viewFile}");
+        $fileLocation = root_dir("Views/{$viewFile}");
 
         include($fileLocation);
     }
