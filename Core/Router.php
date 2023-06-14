@@ -6,15 +6,15 @@ use JetBrains\PhpStorm\NoReturn;
 
 class Router
 {
-    public $postParams = [];
+    public array $postParams = [];
 
     public array $getRoutes = [];
 
     public static function initialize(): void
     {
-        include_once("../routes/routes.php");
+        include_once(root_dir('routes/routes.php'));
 
-        require(__DIR__ . "/../view/404.html");
+        require(root_dir('view/404.html'));
         http_response_code(404);
     }
 
