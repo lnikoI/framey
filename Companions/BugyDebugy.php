@@ -6,8 +6,6 @@ use JetBrains\PhpStorm\NoReturn;
 
 class BugyDebugy
 {
-    protected mixed $variable;
-
     #[NoReturn] public function bugy(mixed $variable): void
     {
         echo $this->title();
