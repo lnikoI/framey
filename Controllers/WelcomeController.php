@@ -4,11 +4,22 @@ namespace Controllers;
 
 class WelcomeController extends Controller
 {
+    public function home()
+    {
+        $stmt = $this->db->conn->query("SELECT * FROM users");
+
+        $users = $stmt->fetchall();
+
+        deb($users);
+    }
+
     public function index(): void
     {
         $stmt = $this->db->conn->query("SELECT * FROM users");
 
         $users = $stmt->fetchall();
+
+        deb($users);
 
         $this->view('welcome.php', ['users' => $users]);
     }

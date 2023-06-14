@@ -1,9 +1,11 @@
 <?php
 
-use Core\Router;
 use Controllers\WelcomeController;
+use Core\Router;
 
 $router = new Router();
+
+$router->get("/", [WelcomeController::class, 'home']);
 
 $router->get("/index", [WelcomeController::class, 'index']);
 

@@ -2,24 +2,24 @@
 
 namespace Traits;
 
-Trait View
+trait View
 {
-	protected $viewDir = "view";
+    protected $viewDir = "view";
 
-	public function view(string $viewFile, array $data = null)
-	{
-		$fileLocation = __DIR__ . "/../{$this->viewDir}/{$viewFile}";
+    public function view(string $viewFile, array $data = null)
+    {
+        $fileLocation = __DIR__ . "/../{$this->viewDir}/{$viewFile}";
 
-		require_once($fileLocation);
-	}
+        require_once($fileLocation);
+    }
 
-	public function setViewDir(string $viewDir)
-	{
-		$this->viewDir = $viewDir;
-	}
+    public function setViewDir(string $viewDir)
+    {
+        $this->viewDir = $viewDir;
+    }
 
-	public function getViewDir()
-	{
-		return $this->viewDir;
-	}
+    public function getViewDir()
+    {
+        return $this->viewDir;
+    }
 }

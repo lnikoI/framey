@@ -16,13 +16,12 @@ class BugyDebugy
         echo $this->strongEcho('Line: ') . $this->traces()['line'];
 
         ob_start();
-        var_dump($variable);
+        print_r($variable);
 
         $output = ob_get_clean();
 
         echo $this->styleHighlightedOutput($output);
 
-        echo $this->newLine();
         echo $this->title();
 
         die();
@@ -30,9 +29,9 @@ class BugyDebugy
 
     protected function styleHighlightedOutput(string $output): string
     {
-        $style = "\"background-color: lightgray; padding: 10px;\"";
+        $style = "\"background-color: #f6f8fa; padding: 10px; border-radius: 5px; border: 1px solid #ff00ff; font-size: 14px; line-height: 1.5;\"";
 
-        return "<div style=$style><pre>" . highlight_string("<?php\n" . $output, true) . "</pre></div>";
+        return "<pre style=$style>" . highlight_string("<?php\n" . $output, true) . "</pre>";
     }
 
     protected function traces(): array
