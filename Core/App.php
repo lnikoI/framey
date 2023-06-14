@@ -2,13 +2,13 @@
 
 namespace Core;
 
-use Assistants\Environment;
+use Assistants\MissEnvy;
 
 class App
 {
     public static function initialize(): void
     {
-        Environment::initialize();
+        MissEnvy::initialize();
 
         Router::initialize();
     }

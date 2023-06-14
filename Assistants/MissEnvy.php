@@ -2,7 +2,7 @@
 
 namespace Assistants;
 
-class Environment
+class MissEnvy
 {
     /**
      * @throws \RuntimeException
