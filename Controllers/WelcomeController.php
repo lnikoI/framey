@@ -13,7 +13,7 @@ class WelcomeController extends Controller
         deb($users);
     }
 
-    public function index(): void
+    public function index()
     {
         $stmt = $this->db->conn->query("SELECT * FROM users");
 

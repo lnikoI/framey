@@ -4,16 +4,16 @@ namespace Traits;
 
 trait View
 {
-    protected $viewDir = "view";
+    protected string $viewDir = "view";
 
-    public function view(string $viewFile, array $data = null)
+    public function view(string $viewFile, array $data = null): void
     {
         $fileLocation = __DIR__ . "/../{$this->viewDir}/{$viewFile}";
 
         require_once($fileLocation);
     }
 
-    public function setViewDir(string $viewDir)
+    public function setViewDir(string $viewDir): void
     {
         $this->viewDir = $viewDir;
     }
