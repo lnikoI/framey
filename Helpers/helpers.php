@@ -38,3 +38,12 @@ if (! function_exists('root_dir')) {
         return str_replace('\\', '/', $dirPath);
     }
 }
+
+if (! function_exists('view')) {
+    function view(string $viewFile, array $data = null): void
+    {
+        $fileLocation = root_dir("view/{$viewFile}");
+
+        include($fileLocation);
+    }
+}

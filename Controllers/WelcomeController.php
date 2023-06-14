@@ -10,7 +10,7 @@ class WelcomeController extends Controller
 
         $users = $stmt->fetchall();
 
-        deb(cfg('app.url'));
+        deb($users);
     }
 
     public function index()
@@ -19,14 +19,12 @@ class WelcomeController extends Controller
 
         $users = $stmt->fetchall();
 
-        deb($users);
-
-        $this->view('welcome.php', ['users' => $users]);
+        view('welcome.php', ['users' => $users]);
     }
 
-    public function show(): void
+    public function show()
     {
-        $this->view('show.php');
+        view('show.php');
     }
 
     public function createUser()
