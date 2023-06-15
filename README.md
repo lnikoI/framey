@@ -19,10 +19,15 @@ Point your web server's document root to the public directory.
 ### Install dependencies:
 Framey relies on a few external dependencies. Use *Composer* to install them.
 `composer install`
+
 ### Configuration:
+Copy `env.example` and rename it to `.env`.
+`cp env.example .env`
 Modify the `.env` file located in the root directory to suit your environment and application needs.
+
 ### Build your application:
 Begin building your application by defining routes, creating controllers, and configuring models as per the MVC pattern.
+
 ### Run your application:
 Access your application in a web browser and start exploring the features of Framey.
 
