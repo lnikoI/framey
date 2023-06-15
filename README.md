@@ -43,4 +43,4 @@ Framey is open-source software released under the MIT License. Feel free to use,
 This framework was inspired by various PHP frameworks, mainly including Laravel and Symfony.
 Thanks to the open-source community for their valuable contributions and feedback.
 
-Happy coding
+Happy coding!
