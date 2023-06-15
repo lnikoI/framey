@@ -22,6 +22,7 @@ Framey relies on a few external dependencies. Use *Composer* to install them.
 
 ### Configuration:
 Copy `env.example` and rename it to `.env`.
+
 `cp env.example .env`
 Modify the `.env` file located in the root directory to suit your environment and application needs.
 
